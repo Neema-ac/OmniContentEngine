@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b935d3f4-fe21-41a7-ba17-075473dcd94a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/OmniContentEngine.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/engine.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thumbnail_gen.py" afterDir="false" />
-    </list>
+    <list default="true" id="b935d3f4-fe21-41a7-ba17-075473dcd94a" name="Changes" comment="Initial commit: OmniClip Pro production engine" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,6 +24,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Neema-ac/OmniContentEngine.git",
+    "accountId": "8a1df841-ffaf-4c42-9742-b182ccdc5b6e"
+  }
+}]]></component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -147,11 +142,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1788609452860</updated>
-      <workItem from="1788609454091" duration="1542000" />
+      <workItem from="1788609454091" duration="2031000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial commit: OmniClip Pro production engine">
+      <option name="closed" value="true" />
+      <created>1788611364265</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1788611364265</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit: OmniClip Pro production engine" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit: OmniClip Pro production engine" />
   </component>
 </project>
