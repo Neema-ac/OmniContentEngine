@@ -340,14 +340,23 @@ Fix: Switch to a state-graph router. Instead of one monolithic agent, use determ
                           <th className="p-3.5 w-40 font-mono">Timestamp</th>
                           <th className="p-3.5">Visual Cut / B-Roll Directive</th>
                           <th className="p-3.5 w-72">Sound Design & SFX Cue</th>
+                          <th className="p-3.5 w-16"></th>
                         </tr>
                       </thead>
                       <tbody className="divide-y divide-gray-800">
                         {data.production_cues.map((c, i) => (
-                          <tr key={i} className="hover:bg-white/[0.02] transition">
+                          <tr key={i} className="hover:bg-white/[0.02] transition group">
                             <td className="p-3.5 font-mono text-indigo-400 font-bold whitespace-nowrap">{c.timestamp_estimate}</td>
                             <td className="p-3.5 text-gray-200">{c.visual_broll}</td>
                             <td className="p-3.5 text-gray-400 italic">{c.audio_sfx}</td>
+                            <td className="p-3.5">
+                              <button
+                                onClick={() => navigator.clipboard.writeText(`${c.timestamp_estimate} — ${c.visual_broll} | SFX: ${c.audio_sfx}`)}
+                                className="opacity-0 group-hover:opacity-100 text-gray-500 hover:text-white text-[11px] px-2 py-1 rounded bg-gray-800 hover:bg-gray-700 transition"
+                              >
+                                Copy
+                              </button>
+                            </td>
                           </tr>
                         ))}
                       </tbody>
@@ -430,15 +439,29 @@ Fix: Switch to a state-graph router. Instead of one monolithic agent, use determ
                       <span className="text-xs font-bold text-sky-400 uppercase tracking-wider block mb-3">Vertical Video Hooks (Shorts / Reels / TikTok)</span>
                       <div className="space-y-2">
                         {data.viral_hook_variations.map((hook, i) => (
-                          <div key={i} className="p-3 rounded-lg bg-[#161F31] text-xs text-gray-300 border-l-2 border-sky-400">
-                            {hook}
+                          <div key={i} className="p-3 rounded-lg bg-[#161F31] text-xs text-gray-300 border-l-2 border-sky-400 flex justify-between items-start gap-3">
+                            <span>{hook}</span>
+                            <button
+                              onClick={() => navigator.clipboard.writeText(hook)}
+                              className="shrink-0 text-gray-500 hover:text-white text-[11px] px-2 py-1 rounded bg-gray-800 hover:bg-gray-700"
+                            >
+                              Copy
+                            </button>
                           </div>
                         ))}
                       </div>
                     </div>
 
                     <div className="p-5 rounded-xl bg-[#121826] border border-gray-800">
-                      <span className="text-xs font-bold text-gray-300 uppercase tracking-wider block mb-2">Seed Thread Starter (X / Twitter)</span>
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-xs font-bold text-gray-300 uppercase tracking-wider">Seed Thread Starter (X / Twitter)</span>
+                        <button
+                          onClick={() => navigator.clipboard.writeText(data.x_thread_first_tweet)}
+                          className="text-gray-500 hover:text-white text-[11px] px-2 py-1 rounded bg-gray-800 hover:bg-gray-700"
+                        >
+                          Copy
+                        </button>
+                      </div>
                       <pre className="p-3 rounded-lg bg-[#161F31] text-xs text-gray-300 font-mono whitespace-pre-wrap leading-relaxed">{data.x_thread_first_tweet}</pre>
                     </div>
                   </div>
